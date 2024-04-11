@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.wrapper {
+    width: 50%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    word-spacing: 1.2px;
+}
+
+.accordion-item {
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-header::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: absolute;
+    right: 20px;
+    transition: .2s;
+}
+
+.accordion-header.active::after {
+    transform: rotate(-180deg);
+}
+
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.answer {
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
